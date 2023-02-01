@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External, Internal ve Inline CSS Kullanimi</title>
+    <link rel="stylesheet" href="ders.css">
+</head>
+<body>
+    <!-- Header Starts -->
+    <header>
+        <h1>
+            External, Internal ve Inline CSS Kullanimi
+        </h1>
+    </header>
+    <!-- Header Ends -->
+    <!-- Section Starts -->
+    <Section>
+            <p> 
+                 CSS,web sitenizin ekranda nasil gorunecegini belirleyen belirli stil kurallarina sahip dosyadir. CSS kurallari, web sitenizin HTML dosyalarina cesitli sekillerde ve yerlerde uygulanabilir. External yani harici bir still sayfasi Internal yani dahili bir stil sayfasi veya Inline yani satir ici stil kullanabilirsiniz. Her yontemin belirli kullanimlara uygun avantaji vardir.
+            </p>
+            <p>
+                 External stil sayfasi, bir web sayfasindan baglanan bagimsiz bir .css dosyasidir. External stil sayfasinin avantaji, bir kez olusturulabilmesi ve birden cok web sayfasina uygulanabilmesidir. Site tasariminizda genis capli degisiklikler yapmaniz gerekirse eger, stil sayfasinda tek bir degisiklik yapabilirsiniz ve bu degisiklik tum baglantili sayfalara uygulanarak zamandan ve emekten tasarruf saglar.
+            </p>
+                 <img src="https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/css/inlineetikete-ozel%2C-internalayni-dosyada-ve-externalcss-dosyasinda-css-kullanimi/figures/css-yapisi.jpg" alt="External.style">
+            
+            <p>
+                 Internal stil sayfasi, HTML dosyasinin <strong>Head</strong> bolumunde sayfa icin CSS kural kodlarini barindirir. Kural kodlari yalnizca o sayfa icin gecerlidir, ancak sayfa kodunda birden cok ogeye stil uygulamak icin kullanilabilecek class ve id'leri yapilandirabilirsiniz. Yine, CSS kodunda yapilacak tek bir degisiklik, sayfadaki tum etkilenmis ogelere uygulanacaktir.
+            </p>
+                 <img height="500" src="https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/css/inlineetikete-ozel%2C-internalayni-dosyada-ve-externalcss-dosyasinda-css-kullanimi/figures/internal-css.png" alt="Internal.style">
+            <p>
+                 Inline stili, belirli bir sayfa ogesine stil vermek icin,belirli bir HTML etiketi icinde kullanilir. Hizli ve kalici degisiklikler icin kullanislidirlar. ancak tasarim degisikligi yapmaya karar vermeniz durumunda, olusturdugunuz her Inline stilin ayri ayri duzenlenmesi gerektiginden, Exxternal ve Internal stil sayfalarindan daha kullanisli degildir ve digerlerine gore cok fazla tercih edilmez.
+            </p>
+    </Section>
+    <!-- Section Ends -->
+    <!-- Div Starts -->
+    <Div>
+        <h2>Internal CSS Kullanimi</h2>
+            <p>
+                 Internal CSS, stil kodlarinin direkt HTML dosyasinin icinde <strong>head</strong> bolumunde kullanildigi bir yontemdir. <strong>head</strong> bolumunun icinde <strong>style</strong> etiketi actiktan sonra icine gerekli CSS kodlarini yazabilirsiniz.
+                <!-- Ornek: 
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                    <style>
+                    body {
+                    background-color: #f7cac9;
+                    }
+
+                    .firstDiv {
+                    border: 7px outset gold;
+                    background-color: lightblue;
+                    text-align: center;
+                    }
+                    </style>
+                    </head>
+                    <body>
+                    <div class="firstDiv">
+                    <h2>Lorem ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet consectetuer</p>
+                    </div>
+                    </body>
+                    </html> -->
+            </p>
+        <h2>Inline CSS Kullanimi</h2>
+            <p>
+                 Inline yani satir ici stiller, dogrudan HTML kodunuzdaki herhangi bir ogeye uygulanir. Stil niteligi ve ardindan normal CSS ozellikleri bir HTML etiketi icinde belirtilir. 
+                 <!-- Ornek:
+                 <!DOCTYPE html>
+                 <html>
+                 <head>
+                 </head>
+                 <body>
+                 <div style="border-width:7px; border-style:outset; border-color:gold; background-color:lightblue; text-align:center;">
+                 <h2>Lorem ipsum</h2>
+                 <p>Lorem ipsum dolor sit amet consectetuer</p>
+                 </div>
+                 </body>
+                 </html>-->
+            </p>
+    </Div>
+    <!-- Div Ends -->
+    <!-- Footer starts -->
+    <footer> 
+     <ul>
+         <li><a href="ders1.html">Ders1 icin:</a></li>
+         <li><a href="ders2.html">Ders2 icin:</a></li>
+         <li><a href="ders4.html">Ders4 icin:</a></li>
+         <li><a href="ders5.html">Ders5 icin:</a></li>
+     </ul>
+     </footer>
+     <!-- Footer Ends -->
+</body>
+</html>
