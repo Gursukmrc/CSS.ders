@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ile Class ve ID Kullanimi</title>
+    <link rel="stylesheet" href="ders.css">
+</head>
+<body>
+    <!-- Header Starts -->
+    <header>
+        <h1>CSS ile Class ve ID Kullanimi</h1>
+    </header>
+    <!-- Header Ends -->
+    <!-- Section Starts -->
+    <section>
+        <h2>Class ve ID Kullanimi</h2>
+            <p>
+                 Web sayfamizi olustururken HTML elementlerimize bazi stil ozellikleri eklemek isteriz. Bazi yazilarin renkli, bazi resimlerin kucuk veya bazi butonlarin farkli sekilde olmasi gerekebilir ve biz de bunun icin CSS kullaniriz. <br>
+                 Asagide html elementlerine nasil stil ozellikleri ekledigimize bakalim.
+            </p>
+            <!-- 
+                    <p>Bugün kodluyoruz</p>
+                    <p>Yarın da kodluyoruz<p>
+                    p {
+                     color: red;
+                    }
+             -->
+             <p> <strong>Sonuc:</strong> </p>
+             <img src="https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/css/css-ile-class-ve-id-kullanimi/assets/Screenshot_1.jpg" alt="Screenshot_1">
+             <p>
+                Yukarida goruldugu uzere iki farkli p elementimize kirmizi renk ozelligi eklemis olduk. Fakat sadece belirli p elementine istedigimiz herhangi bir ozelligi eklemek istesek ne yapacagiz? bu durumda class veya id secicilerini kullanmamiz gerekiyor.
+             </p>
+    </section>
+    <!-- Section Ends -->
+    <!-- Article Starts -->
+    <article>
+        <h2>
+            <span style="color: pink; font-size: larger;">class</span> Kullanimi
+        </h2>
+            <p>
+                 Class secicisi,HTML uzerinde ayni class'a sahip elemana ulasmamizi saglar. <br>
+                 Class secicisi CSS'de .(Nokta) ile belirtilir.
+            </p>
+            <!-- 
+                .class{
+                    özellikler
+                }
+                <h4>Birinci Başlık</h4>
+                <h4>İkinci Başlık</h4>
+                <h4>Üçüncü başlık</h4>
+             -->
+             <p>
+                Yukarida uc adet h4 elementimiz bulunuyor. Bunlardan sadece ikincisine kirmizi renk ozelligi eklemek istersek class secicisini kullanabiliriz.
+             </p>
+             <!-- 
+                    <h4>Birinci Başlık</h4>
+                    <h4 class="text-red">İkinci Başlık</h4>
+                    <h4>Üçüncü Başlık</h4>
+              -->
+              <p>
+                Daha sonra bunu istedigimiz ozellige ekleyelim.
+              </p>
+              <!-- 
+                    .text-red{
+                    color:red;
+                    }
+               -->
+               <p>
+                <strong>Sonuc:</strong>
+               </p>
+               <img src="https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/css/css-ile-class-ve-id-kullanimi/assets/Screenshot_2.jpg" alt="Screenshot_2">
+               <p>
+                bir class'i birden fazla HTML elementi icin kullanabiliriz.
+               </p>
+               <!-- 
+                    <h4>Birinci Başlık</h4>
+                    <h4 class="h-green">İkinci Başlık</h4>
+                    <h4 class="h-green">Üçüncü Başlık</h4>
+
+                    .h-green {
+                    color:green;
+                    }
+                -->
+                <p>
+                    <strong>Sonuc:</strong>
+                </p>
+                <img src="https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/css/css-ile-class-ve-id-kullanimi/assets/Screenshot_3.jpg" alt="Screenshot_3">
+                <p>
+                    Eger bir HTML elementinin birden fazla class ozelligine sahip olmasini istiyorsak ayni anda iki farkli class'i kullanabiliriz. Bunun icin sadece iki class arasina bosluk birakmak yeterli olacaktir.
+                </p>
+                <!-- 
+                    <h4>Birinci Başlık</h4>
+                    <h4 class="h-blue">İkinci Başlık</h4>
+                    <h4 class="h-blue thick">Üçüncü Başlık</h4>
+
+                    .h-blue{
+                        color:blue;
+                    }
+                    .thick{
+                        font-style: italic;
+                    }
+                 -->
+                <p>
+                    <strong>Sonuc:</strong>
+                </p> 
+                <img src="https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/css/css-ile-class-ve-id-kullanimi/assets/Screenshot_4.jpg" alt="Screenshot_4">
+                <p>
+                    bir HTML elementi kendini kapsayan elementin (parent elementi) stil ozelliklerine sahip olur.
+                </p>
+                <!-- 
+                    <div class="intro"><p>Birinci Paragraf</p><p>İkinci Paragraf</p>
+                    </div>
+                    .intro{
+                        color:pink;
+                    }
+                 -->
+                <p>
+                    <strong>Sonuc:</strong>
+                </p>
+                <img src="https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/css/css-ile-class-ve-id-kullanimi/assets/Screenshot_5.jpg" alt="Screenshot_5">
+                <p>
+                    Yukarida div elementine CSS ozelligi ekledik fakat altindaki elementler (child elementleri) de bu ozellige sahip oldu.
+                </p>
+    </article>
+    <!-- Article Ends -->
+    <!-- Div Starts -->
+    <div>
+        <h2> <span style="color: pink;">id</span> Kullanimi </h2>
+                <p>
+                    ID secicisi, HTML uzerinde ayni id'ye sahip elemana ulasmamizi saglar. <br>
+                    ID Secicisi CSS'de # ile belirtilir. <br>
+                    ID Secicisinin Kullanim amaci olarak class secicisinden bir farki yok diyebiliriz. Ikisi de belirli HTML elementlerine CSS ozellikleri eklemeye yoneliktir. Fakat id secicisinin class secicisinden bazi farklari vardir.
+                </p>
+                <!-- 
+                    #id {
+                        özellikler
+                    }
+                 -->
+                <p>
+                    Bir id'yi sadece bir HTML elementi uzerinde kullanabiliriz.
+                </p>
+                 <!-- 
+                    <h4 id="main-title">Birinci Başlık</h4>
+                    <h4>İkinci Başlık</h4>
+                    #main-title{
+                        color:red;
+                    }
+                  -->
+                <p> <strong>Sonuc:</strong> 
+                </p>
+                  <img src="https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/css/css-ile-class-ve-id-kullanimi/assets/Screenshot_6.jpg" alt="Screenshot_6">
+                <p>
+                    Asagidaki <strong>yanlis</strong> bir kullanimdir!
+                </p>
+                <!-- 
+                    <p id="title">Birinci paragraf</p>
+                    <p id="title">İkinci paragraf</p>
+                 -->
+                <p>
+                    Bir elementin sadece bir tane id'si olabilir. <br>
+                    Asagidakiler Yanlis kullanimlardir.
+                </p>
+                <!-- 
+                    <p id="title" id="text-green">Birinci paragraf</p>
+                    <p id="title text-blue">İkinci paragraf</p>
+                 -->
+    </div>
+    <!-- Div Ends -->
+            <!-- Footer starts -->
+            <footer> 
+                <ul>
+                    <li><a href="ders1.html">Ders1 icin:</a></li>
+                    <li><a href="ders2.html">Ders2 icin:</a></li>
+                    <li><a href="ders3.html">Ders3 icin:</a></li>
+                    <li><a href="ders4.html">Ders5 icin:</a></li>
+                </ul>
+            </footer>
+            <!-- Footer Ends -->
+
+</body>
+</html>
