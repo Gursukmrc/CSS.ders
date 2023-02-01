@@ -1,0 +1,41 @@
+h1, h2 ,h3 ,h4 ,h5 ,h6 {
+color: 	#202020;
+}
+p {
+    font-size: 20px;
+    color: #100000 ;
+}
+body {
+    background-color: tan;
+}
+p {
+    font-weight: bold;
+    font-size: 20px;
+}
+ul{
+    font-size: 20px;
+    
+}
+
+ol{
+    font-size: 20px;
+    font-style: italic;
+}
+strong{
+    font-size: 25px;
+    color: red;
+}
+/*  
+h1 {
+font-size: 2.5em;  40px/16=2.5em 
+}
+
+h2 {
+font-size: 1.875em;  30px/16=1.875em 
+}  
+
+p {
+font-size: 0.875em;  14px/16=0.875em 
+} 
+*/
+
