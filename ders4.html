@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aciklama Satirlari ile Calismak ve Genel Font Ozellikleri</title>
+    <link rel="stylesheet" href="ders.css">
+</head>
+<body> 
+    <!-- Header Starts -->
+    <header>
+        <h1>Aciklama Satirlari ile Calismak ve Genel Font Ozellikleri</h1>
+    </header>
+    <!-- Header Ends -->
+    <!-- Section Starts -->
+    <Section>
+        <h2>Aciklama Satirlari</h2>
+            <p>
+                Aciklama satirlari CSS kodu yazarken aralara kendimiz ve diger yazilimcilar icin notlar birakmamizi saglar. Aciklama satirlarinin onemi kodda guncelleme yapilacagi vakit anlasilmaktadir. Ornek olarak 5000 satir css kodunuz oldugunu dusunun, kodu yazdiktan 1 yil sonra degisiklik yapmak istedigimizde nerede ne yazdigini hatirlamamiz cok zordur. Bunun icin aciklama satirlarini okuruz ve bulmak istedigimiz yerleri daha kolay buluruz. Aciklama satirlari tarayicilar tarafindan gorunmemektedir. <br>
+                CSS'de aciklama satiri bu sekilde baslar /* ve bu sekilde biter */ <br>
+            </p>
+                         <!-- 
+                         /* Tekli yorum satırı */
+                         p {
+                          color: red;
+                         } 
+                         -->
+            <p>
+                Kod da istediginiz yere yorum satiri ekleyebilirsiniz:
+            </p>
+                         <!-- 
+                         p {
+                         color: red;  /* Metin rengini kırmızı yap*/
+                         } 
+                         -->
+            <p>
+                Yorumlari birden cok satira da yazabilirsiniz:
+            </p>
+                        <!-- 
+                            /* Çoklu yorum
+                            satırı bu 
+                            şekilde */
+                            p {
+                            color: red;
+                            }
+                        -->
+    </Section>
+    <!-- Section Ends -->
+    <!-- Div Starts -->
+    <Div>
+        <h2>Genel Font Ozellikleri</h2>
+            <p>
+                CSS'de bes genel yazi tipi ailesi vardir:
+            </p>
+            <ol>
+                <li>
+                     <strong>Serif</strong> yazi tiplerinin her harfin kenarlarinda kucuk bir kontur vardir. Bir formalite ve zarafet duygusu yaratirlar.
+                </li>
+                <li> 
+                     <strong>Sans-serif</strong> yazi tiplerinin temiz satirlari vardir (kucuk konturlar eklenmez.) Modern ve minimalist bir gorunum yaratirlar. 
+                </li>
+                <li> 
+                     <strong>Monospace</strong> yazi tipleri burada tum harfler ayni sabit genislige sahiptir. Mekanik bir gorunum yaratirlar.
+                </li>
+                <li> 
+                     <strong>Cursive</strong> yazi insan el yazisi taklidi gibidir 
+                </li>
+                <li>
+                     <strong>Fantasy</strong> yazi tipleri dekoratif,eglenceli yazi tipleridir.
+                </li>
+            </ol>
+            <p>
+                Tum farkli yazi tipi adlari, genel yazi tipi ailelerinden birine aittir. <br>
+                <strong>Not:</strong> Bilgisayar ekranlarinda, sans-serif yazi tiplerinin serif yazi tiplerinden daha kolay okunabilecegi kabul edilir.  
+            </p> 
+            <br>
+            <br>
+            <p> <Strong style="font-size: larger;">CSS'de, font-family bir metnin yazi tipini belirlemek icin ozelligi kullaniriz.</Strong>
+            </p>
+            <p>
+                <strong>Not:</strong> yazi tipi adi birden fazla kelime ise, "Times New Roman" gibi tirnak icinde olmalidir.
+            </p>
+                <!-- 
+                     .p1 {
+                        font-family: "Times New Roman";
+                        }
+
+                        .p2 {
+                        font-family: Arial;
+                        }
+
+                        .p3 {
+                        font-family: monospace;
+                        }
+                -->
+            <p>
+                <strong style="font-size: larger;">font-style cogunlukla italik metnini belirlemek icin kullanilir.</strong>
+                <ul>
+                    <li> 
+                        <strong>normal</strong> Metin normal sekilde gosterilir. 
+                    </li>
+                    <li> 
+                        <strong>italic</strong> Metin italic sekilde gosterilir.
+                    </li>
+                    <li>
+                        <strong>Oblique</strong>Metin egimli gosterilir ama cok desteklenmiyor.
+                    </li>
+                </ul>
+                <!-- 
+                         p.normal {
+                            font-style: normal;
+                            }
+
+                            p.italic {
+                            font-style: italic;
+                            }
+
+                            p.oblique {
+                            font-style: oblique;
+                            }
+                 -->
+            </p>
+            <p>
+                <strong style="font-size: larger;">CSS'de font-size metnin boyutunu ayarlar.</strong> <br>
+                Metin boyutunu yonetebilmek web tasariminda onemlidir. Bununla birlikte, paragraflarin baslik gibi veya baskalarinin paragraflara benzemesi icin yazi tipi boyutunu ayarlamalisiniz. bunun icinde font-size kullanilir. <br>
+                <strong>Not:</strong> Bir yazi tipi boyutu belirtmezseniz, paragraflar gibi normal metin icin varsayilan boyut 16 pikseldir. (16px=1em).
+
+            </p>
+                 <!--                   
+                        h1 {
+                        font-size: 40px;
+                        }
+                        
+                        h2 {
+                        font-size: 30px;
+                        }
+
+                        p {
+                        font-size: 14px;
+                        }
+                  -->
+            <p>
+                <strong style="font-size: larger;">Em ile Yazi Tipi Boyutlarini Ayarla</strong> <br>
+                Kullanicilarin metni yeniden boyutlandirmasina izin vermek icin (tarayici menusunde), bir cok gelistirici piksel yerine em kullanir. <br>
+                1em,mevcut yazi tipi boyutuna esittir. Tarayicilarda varsayilan metin boyutu 16 pikseldir.Yani,1em'in varsayilan boyutu 16pikseldir.
+            </p>
+                <!-- 
+                     h1 {
+                    font-size: 2.5em; /* 40px/16=2.5em */
+                    }
+
+                    h2 {
+                    font-size: 1.875em; /* 30px/16=1.875em */
+                    }  
+
+                    p {
+                    font-size: 0.875em; /* 14px/16=0.875em */
+                    }
+                 -->
+    </Div>
+    <!-- Div Ends -->
+        <!-- Footer starts -->
+        <footer> 
+            <ul>
+                <li><a href="ders1.html">Ders1 icin:</a></li>
+                <li><a href="ders2.html">Ders2 icin:</a></li>
+                <li><a href="ders3.html">Ders3 icin:</a></li>
+                <li><a href="ders5.html">Ders5 icin:</a></li>
+            </ul>
+        </footer>
+        <!-- Footer Ends -->
+</body>
+</html>
