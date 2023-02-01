@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Seciciler ile Calismak</title>
+    <link rel="stylesheet" href="ders.css">
+</head>
+<body>
+    <!-- Header Starts -->
+    <header>
+        <h1>
+            CSS Seciciler ile Calismak, Istedigimiz HTML Etiket Yapisina Ozellik Ekleyebilmek
+        </h1>
+    </header>
+    <!-- Header Ends -->
+    <!-- Section Starts -->
+    <section>
+            <p>
+                CSS Seciciler, HTML Taglarina ulasarak bicim atamalari yapmamizi saglar. CSS Islemleri, HTML Tagi icinde <strong> style </strong> attribute kullanarak yani inline <strong>head</strong> arasinda <strong>style</strong> tagi kullanarak yani internal ya da dosya uzantisi .css olan bir dosya olusturup bu dosyayi <strong>head</strong> arasina ekleyerek yani external sekilde kullanabiliriz.
+            </p>
+        <h2>Inline</h2>
+            <!-- 
+                <h1 style="color:orange;">Turuncu renkli başlık</h1>
+             -->
+        <h2>Internal</h2>
+             <!-- 
+                <head>
+                    <style>
+                        h1{
+                        color: orange;
+                        }
+                    </style>
+                </head>
+                <body>
+
+                <h1>Turuncu renkli başlık</h1>
+
+                </body>
+              -->
+        <h2>External</h2>
+              <!-- 
+                <head>
+                    <link rel="stylesheet" href="styles.css">
+                </head>
+                <body>
+
+                <h1>This is a heading</h1>
+                <p>This is a paragraph.</p>
+
+                </body>
+               -->
+               <p>
+                <strong>style.css</strong> dosyasi:
+               </p>
+               <!-- 
+                h1{
+                    color:orange;
+                }
+                -->
+                <p>
+                    Kisaca CSS kodlarimizi nasil yazabilecegimizi ogrendikten sonra simdi CSS secicileri kullanarak nasil HTML taglarina erisebibliyoruz onlara bakalim.
+                </p>
+    </section>
+    <!-- Section Ends -->
+    <!-- Div Starts -->
+    <div>
+        <h3>
+            Seciciler
+        </h3>
+        <h2>
+            <strong>
+            Genel Secici
+            </strong>
+        </h2>
+            <p>
+                Bu seciciyi kullanarak tum Etiketlere CSS uygula demis oluruz.
+            </p>
+        <!-- 
+            *{
+                margin:0;
+                padding:0;
+            }
+            div *{
+                color:orange;
+            }
+         -->
+            <p>
+                ilk kullanimda tum elementlerin margin ve padding degerlerini sifirlamis olduk. ikinci kullanimda <strong>div *</strong> diyerek tum div elementleri icindeki elementlerin yazi rengine erismis olduk.
+            </p>
+        <h2>
+            Element Seciciler (Element Selectors)
+        </h2>
+            <p>
+                Bu seciciler ile dogrudan HTML etiket isimlerini kullanarak CSS uygulayabiliriz.
+            </p>
+            <!-- 
+                div{
+                    background-color: orange;
+                }
+             -->
+             <p>
+                Tum div etiketleri etkilenir.
+             </p>
+        <h2>
+            Sinif Seciciler (Class Selectors)
+        </h2>
+            <p>
+                Bu seciciler ile sinif atadigimiz etiketlere CSS uygulayabiliriz. Sinif ismine erismek icin sinif isminin basina <strong> nokta </strong>(.) ekliyoruz.
+            </p>
+            <!-- 
+                .turuncu{
+                    background-color: #FFA500;
+                }
+                p.mavi{
+                    color:blue;
+                }
+                <p class="turuncu">Arka Plan Rengim Turuncu</p>
+                <div class="turuncu">Arka Plan Rengim Turuncu</div>
+             -->
+            <p>
+                Burada ikinci kullanimda <strong>p.mavi</strong> sinif ismi mavi olan p elementlerine erismis olduk.
+            </p>
+        <h2>
+            ID Seciciler (Id Selectors)
+        </h2>
+            <p>
+                Bu seciciler ile id atadigimiz elementlere CSS uygulayabiliriz. id'ler tek bir elemente ait olmalidirlar. Id ozelligine erismek icin <strong>id</strong>'nin basina <strong>#</strong> ekliyoruz.
+            </p>
+            <!-- 
+                #mavi{
+                    background-color: #0000FF;
+                }
+                #lila{
+                    color: #c8a2c8
+                }
+                <p id="mavi">Arka plan rengim turuncu</p>
+                <div id="lila">yazi rengim lila</div>
+             -->
+        <h2>
+            Ozellik Seciciler (Attribute Selectors)
+        </h2>     
+            <p>
+                Bu seciciler ile ozelligi belirttigimiz elementlere CSS uygulayabiliriz. Ozelligin ici bos olsada element bundan etkilenecektir. Ozelliklere erismek icin yapmamiz gereken tek sey koseli parantezler icinde ozelligin ismini <strong>[attribute]</strong> seklinde yaziyoruz.
+            </p>
+            <!-- 
+                [name]{
+                    color: orange;
+                }
+                <button name="">gonder</button> 
+                <ul>
+                    <li name="html">HTML</li>
+                    <li name="css">CSS</li>
+                </ul>
+             -->
+            <p>
+                Bu sekilde name attribute alan tum elementler etkilenir.
+            </p>
+             <!-- 
+                .bth[disabled]{
+                color: orchid;
+                }
+                <button class="btn" disabled="disabled">Submit</button>
+              -->
+            <p>
+                Burada sinifi <strong>.btn</strong> ve niteligi(attribute) <strong>[disabled]</strong> olan butona CSS uyguladik.
+            </p>
+            <!-- 
+                div[title="deneme"] {
+                    background-color: orange;
+                }
+                <div title="Deneme">Lorem, ipsum dolor.</div>
+                <div title="deneme">Lorem, ipsum dolor.</div>
+                <div name="denemefalan">Lored, ipsum dolor.</div>
+             -->
+             <p>
+                Burada tam eslesen ozellige CSS uyguladik. Buyuk-kucuk harf duyarliligi vardir.
+             </p>
+             <!-- 
+                div[title~="isim"] {
+                    color: orange;
+                }
+                <div title='isim'>Lorem, ipsum dolor.</div>
+                <div title="isimler">Lorem, ipsum dolor.</div>
+                <div title="isim ve sehirler">Lorem, ipsum dolor.</div>
+              -->
+            <p>
+                Burada <strong>~=</strong> ifadesi ile <strong>title</strong> ozelligi"isim" iceren divlere eristik.
+            </p>
+            <!-- 
+                a[href ^="https"] {
+                    color: palegreen;
+                }
+                <a href="https://www.google.com/">google</a>
+                <a href="https://github.com/">github</a>
+                <a href="http://github.com/">github</a>
+             -->
+            <p>
+                Burada <strong>^=</strong> ifadesi ile <strong>href</strong> ozelligi "https" ile baslayan a etiketlerine eristik.
+            </p>
+            <!-- 
+                a[href *="http"] {
+                    color: palegreen;
+                }
+                <a href="https://www.google.com/">google</a>
+                <a href="https://github.com/">github</a>
+                <a href="http://github.com/">github</a>
+             -->
+            <p>
+                Burada <strong>*=</strong> ifadesi ile <strong>href</strong> ozelligi "http" iceren a etiketlerine eristik.
+            </p>
+            <!-- 
+                div[class$="test"] {
+                    background: yellow;
+                }
+                <div class="bir_test">Lorem, ipsum dolor.</div>
+                <div class="iki-test">Lorem, ipsum dolor.</div>
+                <div class="uc test">Lorem, ipsum dolor.</div>
+                <div class="dorttest">Lorem, ipsum dolor.</div>
+             -->
+            <p>
+                Burada <strong>$=</strong> ifadesi ile <strong>class</strong> ozelligi sonunda "test" iceren divlere eristik.
+            </p>
+            <!-- 
+                a[href*="https"][href$="com"] {
+                    color: orange;
+                }
+                <a href="https://www.google.com/"> Google</a>
+                <a href="https://reactjs.org/">React.js</a>
+                <a href="https://css-tricks.com/">Css Tricks</a>
+             -->
+            <p>
+                Burada <strong>https</strong> ile baslayan ve sonunda <strong>com</strong> olan <strong>a</strong> etiketlerine eristik. <br>
+                Artik ana hatlariyla ogrendigimiz CSS secicilere daha yakindan bakabiliriz.
+            </p>
+    </div>
+    <!-- Div Ends -->
+    <!-- Section 2 Starts -->
+    <section>
+        <h2>Grup Seciciler (Group Selectors)</h2>
+            <p> 
+                Cogunlukla etiketlere verilen CSS ozellikleri benzer veya ortak olabilir. Bu gibi durumlarda secicileri gruplayarak daha temiz CSS dosyalari olusturabiliriz.
+            </p>
+            <p></p>
+            <!-- 
+                h1,h2,h3{
+                color:orange; 
+                }
+             -->
+            <p>
+                Tum <strong>h1</strong>,<strong>h2</strong>,
+                <strong>h3</strong> etiketlerine erismis olduk.
+            </p>
+            <!-- 
+                p.turuncu{
+                    color: orange;
+                }
+                <p class="turuncu">turuncu yazi</p>
+                <p> normal yazi</p>
+             -->
+            <p>
+                Burada sinif ismi <strong>.turuncu</strong> olan p etiketlerine ulastik.
+            </p>
+        <h2>Cocuk Seciciler</h2>
+            <p>
+                Artik etiketleri birbiriyle olan hiyerarsik duruma gore secerek CSS ozellikleri belirleyecegiz. Child Selector, kendisi ve kendisini sarmalayan bir ust etiketle olan iliskiyi gosterir ve <strong>></strong> isareti ile ifade edilir.
+            </p>
+            <!-- 
+                p > span{
+                    color:orange;
+                }
+                p > span >b{
+                    color:blue;
+                }
+                div>ul>li#first{
+                    color:red;
+                }
+                <p>
+                    <span>child element</span>
+                </p>
+                <p>
+                    <span>Burasi Turuncu renkte <b> burasi mavi renkte olacak </b></span>
+                </p>    
+                <p>
+                    <span>Burasi Turuncu renkte <b> burasi mavi renkte olacak </b></span>
+                </p>    
+                <div>
+                    <ul>
+                        <li id="first">bir</li>
+                        <li>iki</li</li>
+                    </ul>
+                </div>
+             -->
+            <p>
+                Parent yani bir ust kapsayici <strong>p</strong> olan <strong>span</strong> etiketine ulastik.
+            </p>
+        <h2>Torun-Soy Seciciler (Descentad Selectors)</h2>
+            <p>
+                Bir kapsayici parent element altindaki tum etiketlere ulasmak icin kullanilir. Her ulasilacak etiket arasina bosluk konulur.
+            </p>
+            <!-- 
+                div p{
+                    background-color:blue;
+                }
+                <div>
+                    <p>Bu p etiketi arka planı mavi renk</p>
+                    <ul>
+                        <li>
+                            <p>Bu p etiketi arka planı mavi renk</p>
+                        </li>
+                    </ul>
+                    <p>Bu p etiketi arka planı mavi renk</p>
+                </div>
+             -->
+            <p>
+                Burada div icinde olan tum p etiketlerine ulasiriz.
+            </p>
+        <h2>Genel Kardes Seciciler (General Sibling Selectors)</h2>
+            <p>
+                Ayni parent etikete sahip olan ve birbbiri ardina gelen etiketleri secmek icin kullanilir. <strong>~</strong> isareti ile gosterilir.
+            </p>
+            <!-- 
+                ul ~ p{
+                color:orange;
+                }
+                <div>
+                <p>Lorem, ipsum.</p>
+                <ul>
+                    <li>
+                    <p>Lorem, ipsum dolor.</p>
+                    </li>
+                </ul>
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Bu p etiketi turuncu renkte</p>
+                </div>
+            -->
+            <p>
+                Burada dikkat edilmesi gereken iki nokta var. Birincisi <strong>p</strong> etiketi <strong>ul</strong> etiketinden sonra gelmeli (arada baska etiketler olabilir) ve ikiside ayni duzeyde yani ayni parent etiketine sahip olmalilar.
+        
+        <h2>Bitisik Kardes Seciciler (Adjacent Sibling Selector)</h2>
+            <p>
+                Genel kardes seciciden tek farki belirtilen etiketler bitisik arka arkaya gelmeliler. <strong>+</strong> isareti ile gosterilir.
+            </p>
+            <!-- 
+                ul + p{
+                color:green;
+                }
+                <div>
+                <p>Lorem, ipsum.</p>
+                <ul>
+                    <li>
+                    <p>Lorem, ipsum.</p>
+                    </li>
+                </ul>
+                <p>Bu p etiketinin yazı rengi yeşil</p>
+                </div>
+             -->
+        <h2>Sahte Sinif Seciciler (Pseudo classes)</h2>
+            <p>
+                Sahte siniflar kullanarak HTML etiketlerine CSS uygulayabiliriz. Kullanimlari <strong>selector:pseudo class {}</strong> seklindedir.
+            </p>
+            <p>
+                <strong>:link</strong> <br> Daha once tarayicida acilmamis linke CSS uygular. <strong>Not:</strong>Etkisini gormek icin tarayiciya gecmisi temizlemek gerekebilir.
+            </p>
+            <!-- 
+                a#google:link {
+                color: red;
+                }
+                <a id="google" href="https://www.google.com/">Google</a>
+             -->
+             <p>
+                <strong>:hover</strong> <br>
+                Secici ile isaretlenen etiketin uzerine mouse ile gelindiginde CSS uygulanir ve mouse uzerinde degilken etkisi kaybolur.
+             </p>
+             <!-- a.test:hover{
+                color:red;
+             }
+             <a class="test" href="https://www.github.com/">Github</a> 
+            -->
+            <p>
+                <strong>:active</strong> <br>
+                Mouse ile tiklandiginda CSS uygulanir. Tiklama kaldirildiginda etkisi kaybolur.
+            </p>
+            <!-- 
+                a:active {
+                position: relative;
+                top: 5px;
+                }
+                <a href="#">Submit</a>
+             -->
+            <p>
+                <strong>:first-child</strong> <br>
+                Ilk child etikete CSS uygulanir.
+            </p>
+            <!-- 
+                ul > li:first-child {
+                    color: orange;
+                    }
+                <ul>
+                    <li>lorem</li>
+                    <li>lorem</li>
+                    <li>lorem</li>
+                    <li>lorem</li>
+                </ul>
+             -->
+             <p>
+                <strong>:last-child</strong> <br>
+                Son child etikete CSS uygular.
+             </p>
+             <p>
+                <strong>::first-latter</strong> <br>
+                Blok seviyesinde bir etiketteki ilk harfe CSS uygular.
+             </p>
+             <p>
+                <strong>::Before</strong> <br>
+                Belirtilen etiketin onune CSS uygular.
+             </p>
+             <p>
+                <strong>::after</strong> Belirtilen etiketin sonuna CSS uygular. Kullanimi <strong>::before</strong> ile aynidir.
+             </p>
+    </section>
+    <!-- Section 2 Ends -->
+
+</body>
+</html>
