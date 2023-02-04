@@ -1,19 +1,15 @@
 h1, h2 ,h3 ,h4 ,h5 ,h6 {
 color: 	#202020;
 }
-p {
-    font-size: 20px;
-    color: #100000 ;
-}
-body {
-    background-color: tan;
-}
+
 p {
     font-weight: bold;
+    color: #100000 ;
     font-size: 20px;
 }
 ul{
     font-size: 20px;
+    
     
 }
 
@@ -25,6 +21,32 @@ strong{
     font-size: 25px;
     color: red;
 }
+body{
+    background-color: tan;
+    margin: auto;
+    width: 800px;
+    height: :;
+    
+    
+}
+.ul3{ margin:0 30% 0 30%;
+    
+}
+.ul2{
+    margin:0 20% 0 20%;
+}
+
+a:hover{
+    color: red;
+}
+a:active{
+    color:green;
+}
+hr{
+    color: black;
+}
+
+
 /*  
 h1 {
 font-size: 2.5em;  40px/16=2.5em 
