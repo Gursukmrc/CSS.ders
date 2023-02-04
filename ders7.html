@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Kutu Ozellikleri</title>
+    <link rel="stylesheet" href="ders7.css">
+</head>
+<body>
+    <!-- Header Starts -->
+    <header class="box2">
+    <h1>
+        CSS kutu Ozellikleri (Margin, Padding, Width, Height)
+    </h1>
+    </header>
+    <!-- Header Ends -->
+    <!-- Kutu Ozellikleri Starts -->
+    <div class="box2">
+        <h2>
+            Kutu Ozellikleri
+        </h2>
+            <p>
+                <strong> Kutu modelinin sema halindeki gosterimi:</strong> <br>
+                <img src="https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/css/css-kutu-ozelliklerimargin%2C-padding%2C-width%2C-height-kullanimi/figures/boxmodel_.png" alt="Model.img">
+            </p>
+            <p>
+                <strong>Kutu modeli margin,padding,border ve icerikten olusur.</strong>
+            </p>
+            <ul>
+                <li>
+                     <strong>Icerik(content):</strong>Elementin icinde olan resim,ses ya da yazidir. 
+                </li>
+                <li>
+                    <strong>Padding:</strong>Icerik ile border arasinda olan bosluk.
+                </li>
+                <li>
+                    <strong>Border:</strong>Padding ile margin'i ayiran sinirdir.
+                </li>
+                <li>
+                    <strong>Margin:</strong>Kutunun diger kutularla arasindaki mesafeyi ayarlayan bosluk.
+                </li>
+            </ul>
+            <p>
+                Yukaridaki kayramlarin disinda kutunun boy ve uzunlugunu belirleyen width ve height kavramlari vardir. Bunlari da alistirmada gosterelim
+            </p>
+        
+    </div>
+    <!-- Kutu Ozellikleri Ends -->
+    <!-- Width ve Height Starts -->
+    <div class="box2">
+        <h3>
+            <strong>width</strong>ve <strong>height</strong>
+        </h3>
+            <p>
+                <i >width</i> ve <i>height</i>ozellikleri ile elementin, yani lego parcamizin boy ve genisligini ayarlayabiliriz. Bu ozellikleri biz yazmadigimiz taktirde tarayici kendisi ayarlar ve yapacagimiz web uygulamasinda istenmeyen sonuclara neden olur. Bu ozellikleri <i>px</i>, <i>em</i> ve <i>%</i> ile kullanabiliriz. <i>%</i> ile kullandigimiz zaman elementimiz hangi elementin icindeyse ona gore oranlanir. Yani <i>800px</i> boyunda bir <i>div</i> tag'inin icinde bulunan bir elementin boyunu <i>50%</i> olarak ayarlarsaniz elementin boyu 400px olur.
+
+            </p>
+            <br>
+            <p>
+                <i>Max-width</i> ozelligi ise bir elementin genisligini sinirlamak istedigimizde kullaniriz. Diyelim ki bir element tarayici ekranindan fazla genis veya uzun. <strong>Bu durumda scrollbar (kaydirma cubugu) cikar.</strong>
+            </p>
+            
+    </div>
+    <!-- Width ve Height Ends -->
+    <!-- Margin Ve Padding Starts-->
+    <div class="box2">
+        <h3>
+            <strong>margin</strong> ve <strong>padding</strong>
+        </h3>
+        <h4>margin</h4>
+            <p>
+                Margin ozelligi ile elementin disindaki bosluk olusturmada kullanildigini ogrenmistik. Simdi nasil kullanildigini aciklamaya calisacagiz.
+            </p>
+            <p>
+                <i>margin</i> ozelligini <i>50px</i> yaptiginizda elementin dort yaninda <i>50px</i> bosluk olusturur. Element saga dogru kayar. <i>Negatif</i> degerler de kullanilabilir. <i>margin</i> degerine <i>-50px</i> yazdiginiz taktirde element sola dogru kayacaktir. dort yaninda degil de sadece bir yonde bbosluk olusturmak istebilirsiniz. Bunun icin de ozellikler vardir.
+            </p>
+            <ul style="padding-left: 160px;">
+                <li>
+                    <i>margin-left:</i>Soldan saga bosluk birakir.
+                </li>
+                <li>
+                    <i>margin-top:</i>Yukardan bosluk birakir.
+                </li>
+                <li>
+                    <i>margin-bottom:</i>Asagidan bosluk birakir.
+                </li>
+                <li>
+                    <i>margin-right:</i>Sagdan bosluk birakir.
+                </li>
+            </ul>
+            <p>
+                Bu degerleri tek bir satirda ayarlamamiz mumkundur. <br>
+                <strong style="color: blue;">margin:</strong> 100px 150px 60px 50px;
+            </p>
+            <p>
+                Bir elementi ortalamak icin <i>margin:auto</i> degeri vermelisiniz. Bunun duzgun calismasi icin de <i>width</i> ozelliginin de kullanilmasi oneriliyor. Boylelikle sagdan ve soldan esit olarak ortalanmis olur. Aksi halde boyutu belli olmayan bir kutuyu ortalamayabilir.
+            </p>
+            <h3>padding</h3>
+            <p>
+                Simdi gelelim padding ozelligine. Elementin icindeki yazilarin <strong>cerceve</strong>(border) ile mesafesini <i>padding</i> ile ayarlariz. <i>margin</i> ozelliginde oldugu gibbi <i>padding:50p</i> yaptigimizda icerigin her tarafi icin <i>50px</i> bosluk birakiyoruz. Belirli bir tarafta <i>padding</i> birakmak icin:
+            </p>
+            <ul>
+                <li>
+                    <i>padding-top:</i>icerigin yukarisinda bosluk birakir.
+                </li>
+                <li>
+                    <i>padding-bottom</i>icerigin asagisinda bosluk birakir.
+                </li>
+                <li>
+                    <i>padding-left</i>icerigin solunda bosluk birakir.
+                </li>
+                <li>
+                    <i>padding-right</i>icerigin saginda bosluk birakir.
+                </li>
+            </ul>
+            <p>
+                Bunlari tek tek tanimlamak yerine tek bir satirda belirlemek mumkundur. <br>
+                <strong>Ornegin:</strong>
+            </p>
+            <ul style="padding-left: 160px;">
+                <li>
+                    <strong>padding:</strong> 10px 20px 30px 40px; <br>
+                    Burada üst boşluk 10px,sağ boşluk 20px,alt boşluk 30px ve sol boşluk 40px dir.
+                </li>
+                <li>
+                    <strong>padding:</strong> 10 px, 20px, 30px; <br>
+                    Üst boşluk 10px,sağ ve sol boşluk 20px,alt boşluk 30px dir.
+                </li>
+                <li>
+                    <strong>padding:</strong>10px, 20px; <br>
+                    üst ve alt boşluk 10px,sağ ve sol boşluk 20px
+                </li>
+            </ul>
+    </div>
+    <!-- Margin Ve Padding Ends -->
+</body>
+</html>
