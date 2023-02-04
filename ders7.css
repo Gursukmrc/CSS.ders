@@ -1,0 +1,18 @@
+
+
+.box2{
+   margin: auto;
+   width: 800px;
+   
+}
+.box2>strong{
+    color: blue;
+}
+
+i{
+    color: red;
+}
+body{background-color: tan;}
+.box2 strong{
+    color: blue;
+}
